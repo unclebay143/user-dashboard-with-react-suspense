@@ -1,0 +1,8 @@
+.todo-container{
+    min-height: 100px;
+}
+
+.todo-status{
+    display: inline-block;
+    margin-left: 30px;
+}

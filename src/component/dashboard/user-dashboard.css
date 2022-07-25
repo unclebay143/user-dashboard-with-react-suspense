@@ -1,0 +1,21 @@
+.dashboard-container {
+    display: flex;
+    justify-content: center;
+    background-color: #282c34;
+    min-height: 100vh;
+    padding: 0 20px;
+    color: white;
+}
+ 
+.container{
+    border-right: 1px solid #c2c2c2;
+    padding: 10px;
+}
+
+.right.container{
+    width: 70%;
+}
+  
+.loading-text{
+    color: green;    
+}

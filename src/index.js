@@ -1,13 +1,21 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React, { Suspense } from "react";
+import ReactDOM from "react-dom/client";
+import { AppLoader } from "./component/loader/AppLoader";
+import "./index.css";
+// import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import ErrorBoundary from "./component/error-boundary/ErrorBoundary";
+import { ErrorPage } from "./component/error-boundary/ErrorPage";
+const App = React.lazy(() => import("./App"));
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App />
+    <ErrorBoundary fallback={<ErrorPage />}>
+      <Suspense fallback={<AppLoader />}>
+        <App />
+      </Suspense>
+    </ErrorBoundary>
   </React.StrictMode>
 );
 

@@ -1,0 +1,29 @@
+.album-section{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.album-card{
+    background-color: #c2c2c2;
+    color: #282c34;
+    display: inline;
+    padding: 10px;
+    border-radius: 5px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.album-id{
+    display: inline-block;
+    margin-right: 10px;
+    background: #282c34;
+    border-radius: 50%;
+    color: white;
+    padding: 2px;
+    width: 20px;
+    text-align: center;
+    font-size: 14px;
+}
